@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<section class="container">
+  <div class="row centre-v">
+    <div class="card login-card">
+      <div class="main card-block">
+        <h1>Sign up</h1>
+        <div class="login-or">
+          <hr class="hr-or">
+        </div>
+        <form action="." method="post" class="register-form">
+          {% csrf_token %}
+          {% for field in form %}
+            <p>
+              {{ field }}
+              {% for error in field.errors %}
+              <div class="alert alert-danger" role="alert"><strong>{{ error }}</strong></div>
+              {% endfor %}
+            </p>
+          {% endfor %}
+          <div class="btn-login">
+            <input class="btn btn-info" type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="row centre-v">
+  <div class="card lboard-card">
+    <div class="card-block">
+      <h3><span class="leaderboard">Leaderboard</span></h3>
+      <h3 class="trophy"><i class="fa fa-trophy" aria-hidden="true"></i></h3>
+      <div class="login-or">
+        <hr class="hr-or">
+      </div>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#coins" role="tab"><button type="button" class="btn btn-primary">Coins</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#pomodoros" role="tab"><button type="button" class="btn btn-primary">Pomodoros</button></a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="coins" role="tabpanel">
+          {% if topCoins %}
+          <ul class="list-group">
+          {% for user, rank in topCoins %}
+          <li class="list-group-item list-group-item-info list-group-item-action"><span class="rank">{{ rank }}.</span> <span class="user">{{ user }}</span>
+            <span class="ranking-coins"><button type="button" class="btn btn-info btn-primary btn-lb">Coins:&nbsp;{{ user.profile.coins }}<img class="coin-img shop-coin" src="{% static 'assets/coin.png' %}" height="20px" width="auto"></button></span>
+          </li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        <div class="tab-pane" id="pomodoros" role="tabpanel">
+          {% if topPomodoros %}
+          <ul class="list-group">
+          {% for user, rank in topPomodoros %}
+          <li class="list-group-item list-group-item-info list-group-item-action"><span class="rank">{{ rank }}.</span> <span class="user">{{ user }}</span>
+            <div class="ranking-coins"><button type="button" class="btn btn-info btn-primary btn-lb">Pomodoros:&nbsp;{{ user.profile.cycles }}</button></div>
+          </li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+{% endblock %}

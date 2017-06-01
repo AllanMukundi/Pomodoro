@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Pomodoro | Login{% endblock %}
+
+{% block content %}
+
+<section class="container">
+  <div class="row centre-v">
+    <div class="card login-card">
+      <div class="main card-block">
+        {% if request.GET.logout %}
+        <div class="modal" id="logout-modal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="alert alert-success" role="alert">
+                  <p><b>You have successfully logged out</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        <h3>Login</h3>
+        {% if form.errors %}
+        <div class="alert alert-danger" role="alert"><b>Invalid login credentials<br>please try again.</b></div>
+        {% endif %}
+        <div class="login-or">
+          <hr class="hr-or">
+        </div>
+        <img src="{% static 'assets/login-clock.png' %}" width="15%" height="auto" class="clock">
+        <form action="." method="post" class="login-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="forgot pull-left">
+            <a href="/password_reset" class="forgot">Forgot your password?</a>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="btn-login">
+                <input class="btn btn-success" type="submit" value="Enter">
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="login-or">
+          <hr class="hr-or hr-social">
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-block btn-social btn-lg btn-facebook btn-top">
+            <span class="fa fa-facebook"></span>Sign in with Facebook</a>
+            <a href="{% url 'social:begin' 'twitter' %}" class="btn btn-block btn-social btn-lg btn-twitter">
+            <span class="fa fa-twitter"></span>Sign in with Twitter</a>
+            <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-block btn-social btn-lg btn-google">
+            <span class="fa fa-google"></span>Sign in with Google+ </a>
+          </div>
+      </div>
+      <div class="create-acc">
+        <a href="/users/register" class="create-acc">Create an account</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

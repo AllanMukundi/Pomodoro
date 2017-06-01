@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="row centre-v">
+  <div class="card shop-card">
+    <div class="card-block">
+      <h3><span class="shop-tag">Shop</span></h3>
+      <div class="login-or shop-or">
+        <hr class="hr-or">
+      </div>
+      {% if items %}
+      {% for item in items %}
+      <div class="alert alert-shop" role="alert">
+        <span class="shop-title">{{ item.perk }}</span>
+        <span class="shop-cost"><button type="button" class="btn btn-primary btn-shop" data-toggle="modal" data-target="#shopModal" onclick="modalPrice({{ item.price }});">Buy:&nbsp;{{ item.price }}<img class="coin-img shop-coin" src="{% static 'assets/coin.png' %}" height="20px" width="auto"></button></span>
+        <div style="clear: right;"></div>
+      </div>
+      {% endfor %}
+      {% endif %}
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="shopModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Purchase confirmation:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-warning modal-alert"><p>This will cost you <span id="price"></span><img class="coin-modal" src="{% static 'assets/coin.png' %}" height="30px" width="auto">.</p></div>
+      </div>
+      <div class="modal-footer">
+        <p class="alert alert-danger" id="broke">You do not have enough coins.</p>
+        <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary btn-success" onclick="buyItem();">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

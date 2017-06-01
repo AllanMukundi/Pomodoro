@@ -1,0 +1,407 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Noto Serif", sans-serif;
+}
+
+.errorlist {
+  display: none;
+}
+
+@media only screen and (max-width: 720px) {
+
+	.clock-timer {
+		font-size: 7rem !important;
+	}
+
+	.btn-control {
+		padding: 5px !important;
+		margin: 80px 5px !important;
+	}
+
+  .shop-card {
+    text-align: center;
+  }
+
+  .shop-cost,
+  .ranking-coins {
+    margin-top: 15px;
+    float: none;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+  .lboard-card {
+    margin-top: 150px;
+  }
+
+}
+
+/*
+==========================
+Header
+==========================
+*/
+
+#logo {
+  font-family: "Aladin", sans-serif;
+  font-size: 50px;
+}
+
+#welcome {
+  font-family: "Aladin", sans-serif;
+  font-size: 30px;
+}
+
+.bg-white {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}
+
+
+/*
+==========================
+Background
+==========================
+*/
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  background: #c2e59c;
+  background: -webkit-linear-gradient(to right, #c2e59c, #64b3f4) fixed;
+  background: linear-gradient(to right, #c2e59c, #64b3f4) fixed;
+}
+
+/*
+==========================
+Links
+==========================
+*/
+
+a {
+  color: #000;
+}
+
+a:hover,
+a:focus {
+  color: #c2e59c;
+}
+
+/*
+==========================
+Login
+==========================
+*/
+
+.login-or {
+  position: relative;
+  font-size: 18px;
+  color: #000;
+  margin-top: 10px;
+          margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hr-or {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.main {
+  text-align: center;
+}
+
+.login-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 40%;
+  background: #f2f2f2;
+  -webkit-box-shadow: 1px -2px 18px -2px rgba(0,0,0,0.9);
+  -moz-box-shadow: 1px -2px 18px -2px rgba(0,0,0,0.9);
+  box-shadow: 1px -2px 18px -2px rgba(0,0,0,0.9);
+}
+
+.clock {
+  margin-top: 3%;
+  margin-bottom: 8%;
+}
+
+.login-form {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5%;
+}
+
+.login-field {
+  width: 95%;
+}
+
+.centre-v {
+  min-height: 90%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.card-block > h3 {
+  font-size: 40px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.btn-login {
+  padding-top: 2%;
+  padding-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fa-facebook,
+.fa-google,
+.fa-twitter {
+  color: #fff;
+}
+
+.btn-top {
+  margin-top: 5%;
+}
+
+.btn-social {
+  color: #fff !important;
+  text-align: center !important;
+}
+
+.create-acc {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #64b3f4;
+}
+
+.create-acc:hover,
+.forgot:hover {
+  text-decoration: none;
+}
+
+.forgot {
+  white-space: nowrap;
+  color: #64b3f4;
+  font-size: 9px;
+  margin-top: -15px;
+}
+
+.checkbox {
+  margin-top: 5px;
+  font-size: 12px;
+  margin-left: 21%;
+}
+
+#logout-modal p {
+  margin-top: 5%;
+}
+
+.pr-complete {
+  font-size: 1.5rem;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/*
+==========================
+Register
+==========================
+*/
+
+.register-form {
+  width: 100%;
+}
+
+#id_username,
+#id_email,
+#id_password1,
+#id_password2 {
+  width: 95%;
+}
+
+/*
+==========================
+Home
+==========================
+*/
+
+.status {
+  font-family: "Aladin";
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.status {
+  margin-top: 5px;
+}
+
+.coin-img {
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.clock-timer {
+  font-size: 12em;
+}
+
+.clock-card,
+.shop-card,
+.lboard-card,
+.pr-card {
+  margin-left: auto;
+  margin-right: auto;
+  background: #f2f2f2;
+  -webkit-box-shadow: 1px -2px 18px -2px rgba(0,0,0,0.9);
+  -moz-box-shadow: 1px -2px 18px -2px rgba(0,0,0,0.9);
+  box-shadow: 1px -2px 18px -2px rgba(0,0,0,0.9);
+}
+
+.clock-block {
+  margin-top: 7%;
+}
+
+.motivation {
+  position: relative;
+  top: 8%;
+  font-family: "Noto Serif";
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  margin-top: 10px;
+}
+
+/*
+==========================
+Shop
+==========================
+*/
+
+.shop-tag {
+  font-size: 3rem;
+}
+
+.alert-shop {
+  background-color: rgba(204, 230, 255, 0.8);
+}
+
+.alert-shop > p {
+  font-family: "Noto Serif";
+  font-size: 2rem;
+}
+
+.shop-coin {
+  position: relative;
+  top: 3px;
+}
+
+.clock-card,
+.shop-card,
+.lboard-card,
+.pr-card,
+.lboard-card h3 {
+  text-align: center;
+}
+
+.shop-title {
+  font-size: 1.25rem;
+  position: relative;
+  top: 8px;
+}
+
+.shop-cost {
+  float: right;
+  margin-left: 5px;
+}
+
+.btn-shop {
+  width: 110px;
+}
+
+#shopModal {
+  margin-top: 3%;
+}
+
+.coin-modal {
+  position: relative;
+  bottom: 2px;
+}
+
+.modal-alert {
+  position: relative;
+  top: 10px;
+  font-size: 1.5rem;
+}
+
+.modal-alert > p {
+  margin-bottom: 0;
+}
+
+.shop-or {
+  margin-top: -4% ;
+  padding-top: 0;
+}
+
+/*
+=========================
+Leaderboard
+==========================
+*/
+
+.lboard-card {
+  min-width: 720px;
+}
+
+.trophy {
+  padding: 0 !important;
+}
+
+.fa-trophy {
+  font-size: 6rem;
+}
+
+.rank {
+  font-size: 2.5rem;
+}
+
+.user {
+  margin-left: 10%;
+  font-size: 1.75rem;
+}
+
+.ranking-coins {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.btn-lb {
+  min-width: 120px;
+  min-height: 45px;
+}
