@@ -95,6 +95,8 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
+AUTH_USER_MODEL = 'pomodoro.CustomUser'
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -161,6 +163,7 @@ SOCIAL_AUTH_TWITTER_SECRET = os.environ.get('DJANGO_TW_SECRET')
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('DJANGO_GO_KEY')
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('DJANGO_GO_SECRET')
+
 
 # Heroku: Update db configuration
 import dj_database_url
