@@ -50,11 +50,7 @@
     left: 0;
   }
 
-  .content {
-    position: relative;
-    margin-top: 15rem;
-  }
-
+  .content,
   .contentcp,
   .contentcl {
     position: relative;
@@ -66,6 +62,17 @@
     margin-top: 7rem;
   }
 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 30%;
+  }
+
+}
+
+.modal-dialog {
+  vertical-align: middle;
 }
 
 /*
