@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG') )
 
-ALLOWED_HOSTS = ['https://pomodoro-web-app.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['pomodoro-web-app.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
