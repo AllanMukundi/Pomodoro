@@ -4,10 +4,11 @@ var transaction;
 
 $(document).ready(function () {
 
-  // Global variables
+ 	// Global variables
+	
 	var pomodoro = 25, currentTime = Date.parse(new Date()), deadline, timeInterval, breakTime = 5, longBreakTime = 15, i = 0, reward = 5
 
-  // Clock setup
+  	// Clock setup
 
 	var clock = document.getElementById("clock-timer");
 	var minutesSpan = clock.querySelector(".minutes");
