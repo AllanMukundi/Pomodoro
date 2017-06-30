@@ -1,4 +1,4 @@
-# Purpose #
+# Pomodoro #
 Productivity web application which incentivizes the Pomodoro Technique.
 Users earn coins as they complete "Pomodoros" which can be spent on recreational
 activities.
