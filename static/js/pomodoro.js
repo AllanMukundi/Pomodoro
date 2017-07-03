@@ -5,7 +5,7 @@ var transaction;
 $(document).ready(function () {
 
  	// Global variables
-	
+
 	var pomodoro = 25, currentTime = Date.parse(new Date()), deadline, timeInterval, breakTime = 5, longBreakTime = 15, i = 0, reward = 5
 
   	// Clock setup
@@ -44,14 +44,14 @@ $(document).ready(function () {
 
         if (i === 7) {
           transaction = reward;
-          update_coins();
+          updateCoins();
           $(".reset, .start-pomodoro").addClass('hidden');
           $(".start-break2").removeClass('hidden');
         }
 
 				else if ((i % 2) === 1) {
           transaction = reward;
-          update_coins();
+          updateCoins();
 				  $(".reset, .start-pomodoro").addClass('hidden');
           $(".start-break1").removeClass('hidden');
 				}
@@ -165,7 +165,7 @@ $.ajaxSetup({
 
 // Update coins
 
-function update_coins() {
+function updateCoins() {
   $.ajax({
     method: "POST",
     url: "/coins/",
@@ -190,7 +190,7 @@ function modalPrice(itemPrice){
 function fetchCoins(coinBalance) {
 if (coinBalance - transaction >= 0) {
     transaction = -transaction;
-    update_coins();
+    updateCoins();
     $("#shopModal").modal("hide");
   } else {
     $("#broke").removeClass("hidden");

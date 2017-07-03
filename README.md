@@ -9,7 +9,7 @@ Features:
 * Currency system
 * Responsive design
 
-Built with: Django/Python, HTML, CSS, JavaScript/jQuery, and Bootstrap.
+Built with: Django/Python, HTML5, CSS, JavaScript/jQuery, AJAX, and Bootstrap.
 
 # Demo #
 Live demo available at: http://pomodoro-web-app.herokuapp.com/.
